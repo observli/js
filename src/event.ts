@@ -1,19 +1,23 @@
 export class Event {
-  private client: any;
+  #client: any;
   id: string;
   title: string;
-  message?: string;
+  subtitle?: string;
+  context: any;
+  topics: string[];
   timestamp: string;
 
   constructor(data: any, client: any) {
-    this.client = client;
+    this.#client = client;
     this.id = data.id;
     this.title = data.title;
-    this.message = data.message;
-    this.timestamp = data.timestamp;
+    this.subtitle = data.subtitle;
+    this.context = data.context;
+    this.topics = data.topics;
+    this.timestamp = data.time;
   }
 
   async delete() {
-    return this.client.delete(this, `/events/${this.id}`);
+    return this.#client.delete(this, `/events/${this.id}`);
   }
 }
