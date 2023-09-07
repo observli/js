@@ -1,7 +1,7 @@
 import { Events } from "./events";
 import { Topics } from "./topics";
 
-export class SaasPing {
+export class Observli {
   public events: Events;
   public topics: Topics;
   private host: string;
@@ -10,7 +10,7 @@ export class SaasPing {
   constructor(config: any) {
     const { host, apiKey } = config;
     this.apiKey = apiKey;
-    this.host = host || "https://api.saasping.com";
+    this.host = host || "https://api.observli.com";
     this.events = new Events(this);
     this.topics = new Topics(this);
   }

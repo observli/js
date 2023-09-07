@@ -1,7 +1,7 @@
 {
-  "name": "saasping",
+  "name": "observli",
   "version": "0.1.0",
-  "description": "JS SDK for saasping.com",
+  "description": "JS SDK for observli.com",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
